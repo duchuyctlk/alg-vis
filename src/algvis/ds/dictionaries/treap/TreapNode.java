@@ -64,16 +64,16 @@ public class TreapNode extends BSTNode {
         final String str = String.valueOf(Math.round(100 * p) / 100.0);
         		
         Color currentViewColor = null;
-		if (!Color.black.equals(v.getColor())) {
-			currentViewColor = v.getColor();
-			v.setColor(Color.black);
-		}
+	if (!Color.black.equals(v.getColor())) {
+	    currentViewColor = v.getColor();
+	    v.setColor(Color.black);
+	}
 		
-		v.drawString(str, x, y - Node.RADIUS * 1.5, Fonts.EXTRA_SMALL);
+	v.drawString(str, x, y - Node.RADIUS * 1.5, Fonts.EXTRA_SMALL);
 
-		if (currentViewColor != null) {
-			v.setColor(currentViewColor);
-		}
+	if (currentViewColor != null) {
+	    v.setColor(currentViewColor);
+	}
     }
 
     void bgPColor() {
