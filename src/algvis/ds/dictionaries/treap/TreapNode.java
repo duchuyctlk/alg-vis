@@ -52,6 +52,19 @@ public class TreapNode extends BSTNode {
         return (TreapNode) super.getParent();
     }
 
+    @Override
+    public void draw(View v) {
+        if (state == Node.INVISIBLE || getKey() == NULL || state == Node.OUT) {
+            return;
+        }
+        drawBg(v);
+        drawKey(v);
+        drawArrow(v);
+        drawArc(v);
+        final String str = String.valueOf(Math.round(100 * p) / 100.0);
+        v.drawString(str, x, y - Node.RADIUS * 1.5, Fonts.EXTRA_SMALL);
+    }
+
     void bgPColor() {
         bgColor(new Color(255, 255 - (int) Math.round(100 * p), 0));
     }
