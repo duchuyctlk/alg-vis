@@ -18,12 +18,12 @@ public abstract class HeapBaseTest extends BaseIntegrationTest {
         priorityQueue = (PriorityQueue) getActiveDataStructure();
         clearActivePanel();
         keys = new int[] {200, 100, 50, 300, 75};
-        toogleMinHeapMode(false);
+        toggleMinHeapMode(false);
     }
 
     protected abstract String getDataStructureName();
 
-    protected void toogleMinHeapMode(boolean minHeap) throws Exception {
+    protected void toggleMinHeapMode(boolean minHeap) throws Exception {
         boolean minHeapModeSet = false;
         VisPanel activeVisPanel = getActiveVisPanel(algVis);
         if (activeVisPanel != null && 

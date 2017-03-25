@@ -35,7 +35,7 @@ public class HeapTest extends HeapBaseTest {
 
     @Test
     public void testMinHeap() throws Exception {
-        toogleMinHeapMode(true);
+        toggleMinHeapMode(true);
         assertTrue(heap.minHeap);
 
         insertArray(0, keys.length - 1);
@@ -100,7 +100,7 @@ public class HeapTest extends HeapBaseTest {
 
     @Test
     public void testDeleteOnMinHeap() throws Exception {
-        toogleMinHeapMode(true);
+        toggleMinHeapMode(true);
         insertArray(0, keys.length - 1);
         delete(0);
         updateRootNodes();
@@ -129,7 +129,7 @@ public class HeapTest extends HeapBaseTest {
 
     @Test
     public void testDecrKeyOnMinHeap() throws Exception {
-        toogleMinHeapMode(true);
+        toggleMinHeapMode(true);
         insert(100);
         insert(200);
         updateRootNodes();

@@ -128,7 +128,7 @@ public class a23TreeTest extends BTreeBaseTest {
     public void testDeleteMinorCase01() throws Exception {
         // the parent of node to be deleted has 2 children
         // the node to be deleted, the first child, has 1 child
-        // its sibling, the second child, has 2 childrend
+        // its sibling, the second child, has 2 children
         keys = new int[] {100, 120, 150, 160};
         insertArray(0, keys.length - 1);
         delete(keys[0]);

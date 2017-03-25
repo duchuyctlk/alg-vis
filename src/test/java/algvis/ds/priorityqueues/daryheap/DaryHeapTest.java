@@ -41,7 +41,7 @@ public class DaryHeapTest extends HeapBaseTest {
 
     @Test
     public void testInsertOnMinHeap() throws Exception {
-        toogleMinHeapMode(true);
+        toggleMinHeapMode(true);
         insertArray(0, 2);
         updateRootNodes();
         assertEquals(keys[1], rootNode.getKey());
@@ -103,7 +103,7 @@ public class DaryHeapTest extends HeapBaseTest {
 
     @Test
     public void testDeleteOnMinHeap() throws Exception {
-        toogleMinHeapMode(true);
+        toggleMinHeapMode(true);
 
         // delete on heap with 1 node
         insert(keys[0]);
@@ -131,7 +131,7 @@ public class DaryHeapTest extends HeapBaseTest {
 
     @Test
     public void testDecrKeyOnMinHeap() throws Exception {
-        toogleMinHeapMode(true);
+        toggleMinHeapMode(true);
         insert(keys[1]);
         insert(keys[0]);
         updateRootNodes();
