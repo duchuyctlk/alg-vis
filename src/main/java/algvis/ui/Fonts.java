@@ -30,7 +30,7 @@ public enum Fonts {
     public final Font font;
     public FontMetrics fm;
 
-    private Fonts(Font f) {
+    Fonts(Font f) {
         font = f;
     }
 
