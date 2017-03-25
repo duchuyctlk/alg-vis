@@ -173,7 +173,7 @@ public class DaryHeapTest extends HeapBaseTest {
     @Test
     public void testCalcTree() throws Exception {
         insertArray(0, 1);
-        rootNode = (DaryHeapNode) daryHeap.root;
+        rootNode = daryHeap.root;
         rootNode.calcTree();
         assertEquals(2, rootNode.nnodes);
         assertEquals(2, Integer.parseInt(getFieldValue(rootNode, "height").toString()));
@@ -205,7 +205,7 @@ public class DaryHeapTest extends HeapBaseTest {
 
     private void updateRootNodes() {
         if (daryHeap != null) {
-            rootNode = (DaryHeapNode) daryHeap.root;
+            rootNode = daryHeap.root;
             if (rootNode != null && rootNode.c != null) {
                 int rootChildCount = rootNode.c.size();
                 childNode1 = rootChildCount > 0 ? rootNode.c.get(0) : null;

@@ -8,7 +8,7 @@ public class BTreeBaseTest extends BaseIntegrationTest {
 
     void updateRootNodes() {
         if (tree != null) {
-            rootNode = (BNode) tree.getRoot();
+            rootNode = tree.getRoot();
             if (rootNode != null && rootNode.c != null) {
                 childNode1 = rootNode.numChildren > 0 && rootNode.c.length > 0 ? rootNode.c[0] : null;
                 childNode2 = rootNode.numChildren > 1 && rootNode.c.length > 1 ? rootNode.c[1] : null;

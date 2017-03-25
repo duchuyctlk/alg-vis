@@ -161,14 +161,14 @@ public class HeapTest extends HeapBaseTest {
     @Test
     public void testIsAnimationDone() throws Exception {
         insert(keys[0]);
-        rootNode = (HeapNode) heap.getRoot();
+        rootNode = heap.getRoot();
         rootNode.setState(Node.INVISIBLE);
         assertTrue(heap.isAnimationDone());
     }
 
     private void updateRootNodes() {
         if (heap != null) {
-            rootNode = (HeapNode) heap.getRoot();
+            rootNode = heap.getRoot();
             if (rootNode != null) {
                 leftNode = rootNode.getLeft();
                 rightNode = rootNode.getRight();
