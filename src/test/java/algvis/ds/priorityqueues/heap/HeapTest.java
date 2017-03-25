@@ -12,8 +12,8 @@ import algvis.ds.priorityqueues.HeapBaseTest;
 import algvis.ui.InputField;
 
 public class HeapTest extends HeapBaseTest {
-    Heap heap;
-    HeapNode rootNode, leftNode, rightNode;
+    private Heap heap;
+    private HeapNode rootNode, leftNode, rightNode;
 
     @Before
     public void setUp() throws Exception {

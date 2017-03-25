@@ -13,8 +13,8 @@ import org.junit.Test;
 import algvis.ui.BaseIntegrationTest;
 
 public class SkipListTest extends BaseIntegrationTest {
-    SkipList skipList;
-    SkipNode leftNode, rightNode;
+    private SkipList skipList;
+    private SkipNode leftNode, rightNode;
 
     @Before
     public void setUp() throws Exception {

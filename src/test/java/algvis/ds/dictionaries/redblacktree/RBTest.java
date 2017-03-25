@@ -24,9 +24,8 @@ import algvis.ui.VisPanel;
 import algvis.ui.view.View;
 
 public class RBTest extends BaseIntegrationTest {
-
-    RB rb;
-    RBNode rootNode, leftNode, rightNode;
+    private RB rb;
+    private RBNode rootNode, leftNode, rightNode;
 
     @Before
     public void setUp() throws Exception {

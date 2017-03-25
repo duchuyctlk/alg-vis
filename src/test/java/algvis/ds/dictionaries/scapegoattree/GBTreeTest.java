@@ -17,8 +17,8 @@ import algvis.ui.BaseIntegrationTest;
 import algvis.ui.VisPanel;
 
 public class GBTreeTest extends BaseIntegrationTest {
-    GBTree tree;
-    GBNode rootNode, leftNode, rightNode;
+    private GBTree tree;
+    private GBNode rootNode, leftNode, rightNode;
 
     @Before
     public void setUp() throws Exception {

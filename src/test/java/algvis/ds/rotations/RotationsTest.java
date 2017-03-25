@@ -21,8 +21,8 @@ import algvis.ui.VisPanel;
 import algvis.ui.view.Layout;
 
 public class RotationsTest extends BaseIntegrationTest {
-    Rotations rotations;
-    BSTNode rootNode, leftNode, rightNode;
+    private Rotations rotations;
+    private BSTNode rootNode, leftNode, rightNode;
 
     @Before
     public void setUp() throws Exception {

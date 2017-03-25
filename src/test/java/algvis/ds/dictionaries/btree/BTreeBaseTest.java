@@ -6,7 +6,7 @@ public class BTreeBaseTest extends BaseIntegrationTest {
     BTree tree;
     BNode rootNode, childNode1, childNode2, childNode3;
 
-    protected void updateRootNodes() {
+    void updateRootNodes() {
         if (tree != null) {
             rootNode = (BNode) tree.getRoot();
             if (rootNode != null && rootNode.c != null) {

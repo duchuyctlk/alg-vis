@@ -13,9 +13,9 @@ import algvis.ui.Buttons;
 import algvis.ui.VisPanel;
 
 public class BaseTest {
-    public static long buttonClickSleepTime = 500;
+    protected static final long buttonClickSleepTime = 500;
 
-    public static JFrame showMainFrame() {
+    protected static JFrame showMainFrame() {
         Object obj = createObject("algvis.ui.MainFrame");
 
         JFrame mainFrame = null;
@@ -29,12 +29,12 @@ public class BaseTest {
         return mainFrame;
     }
 
-    public static AlgVis getAlgVis(JFrame mainFrame) {
+    protected static AlgVis getAlgVis(JFrame mainFrame) {
         Object obj = getFieldValue(mainFrame, "A");
         return obj != null ? (AlgVis) obj : null;
     }
 
-    public VisPanel getActiveVisPanel(AlgVis algVis) {
+    protected VisPanel getActiveVisPanel(AlgVis algVis) {
         if (algVis == null || algVis.panels == null) {
             return null;
         }
@@ -47,11 +47,11 @@ public class BaseTest {
         return algVis.panels[activePanelIndex];
     }
 
-    public Buttons getVisPanelButtons(VisPanel visPanel) {
+    private Buttons getVisPanelButtons(VisPanel visPanel) {
         return visPanel == null ? null : visPanel.buttons;
     }
 
-    public IButton getButton(VisPanel visPanel, String buttonName) {
+    private IButton getButton(VisPanel visPanel, String buttonName) {
         if (visPanel == null || buttonName == null || buttonName.equals("")) {
             return null;
         }
@@ -59,7 +59,7 @@ public class BaseTest {
         return (IButton) getFieldValue(buttons, buttonName);
     }
 
-    public void clickButton(VisPanel visPanel, String buttonName) {
+    private void clickButton(VisPanel visPanel, String buttonName) {
         IButton button = getButton(visPanel, buttonName);
 
         if (button != null) {
@@ -67,7 +67,7 @@ public class BaseTest {
         }
     }
 
-    public void clearVisPanel(VisPanel visPanel) {
+    protected void clearVisPanel(VisPanel visPanel) {
         Exception ex = null;
         try {
             clickButton(visPanel, "clear");

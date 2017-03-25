@@ -24,9 +24,8 @@ import algvis.ui.Buttons;
 import algvis.ui.VisPanel;
 
 public class BSTTest extends BaseIntegrationTest {
-
-    BST bst;
-    int rootKeyValue, leftKeyValue, rightKeyValue;
+    private BST bst;
+    private int rootKeyValue, leftKeyValue, rightKeyValue;
 
     @Before
     public void setUp() throws Exception {

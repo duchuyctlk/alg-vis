@@ -10,7 +10,7 @@ import algvis.ui.BaseIntegrationTest;
 import algvis.ui.VisPanel;
 
 public abstract class HeapBaseTest extends BaseIntegrationTest {
-    public PriorityQueue priorityQueue;
+    protected PriorityQueue priorityQueue;
 
     @Before
     public void setUp() throws Exception {
@@ -21,9 +21,9 @@ public abstract class HeapBaseTest extends BaseIntegrationTest {
         toogleMinHeapMode(false);
     }
 
-    public abstract String getDataStructureName();
+    protected abstract String getDataStructureName();
 
-    public void toogleMinHeapMode(boolean minHeap) throws Exception {
+    protected void toogleMinHeapMode(boolean minHeap) throws Exception {
         boolean minHeapModeSet = false;
         VisPanel activeVisPanel = getActiveVisPanel(algVis);
         if (activeVisPanel != null && 
@@ -40,7 +40,7 @@ public abstract class HeapBaseTest extends BaseIntegrationTest {
         }
     }
 
-    public void decrKey(int delta) throws Exception {
+    protected void decrKey(int delta) throws Exception {
         VisPanel activeVisPanel = getActiveVisPanel(algVis);
         if (activeVisPanel != null && 
                 activeVisPanel.buttons != null && activeVisPanel.buttons instanceof PQButtons) {

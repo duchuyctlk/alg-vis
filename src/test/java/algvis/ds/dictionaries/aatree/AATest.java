@@ -19,8 +19,8 @@ import algvis.ui.Buttons;
 import algvis.ui.VisPanel;
 
 public class AATest extends BaseIntegrationTest {
-    AA aa;
-    AANode rootNode, leftNode, rightNode;
+    private AA aa;
+    private AANode rootNode, leftNode, rightNode;
 
     @Before
     public void setUp() throws Exception {

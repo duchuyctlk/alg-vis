@@ -19,8 +19,8 @@ import algvis.ui.view.View;
 
 public class TreapTest extends BaseIntegrationTest {
 
-    Treap treap;
-    TreapNode rootNode, leftNode, rightNode;
+    private Treap treap;
+    private TreapNode rootNode, leftNode, rightNode;
 
     @Before
     public void setUp() throws Exception {

@@ -18,9 +18,8 @@ import algvis.ui.BaseIntegrationTest;
 import algvis.ui.view.View;
 
 public class AVLTest extends BaseIntegrationTest {
-
-    AVL avl;
-    AVLNode rootNode, leftNode, rightNode;
+    private AVL avl;
+    private AVLNode rootNode, leftNode, rightNode;
 
     @Before
     public void setUp() throws Exception {

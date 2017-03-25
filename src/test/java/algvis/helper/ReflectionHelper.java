@@ -6,7 +6,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 public class ReflectionHelper {
-    static Class<?> getClass(String classFullName) {
+    private static Class<?> getClass(String classFullName) {
         Class<?> cls = null;
         try {
             cls = Class.forName(classFullName);

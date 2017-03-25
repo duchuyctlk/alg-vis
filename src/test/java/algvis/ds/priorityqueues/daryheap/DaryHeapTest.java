@@ -17,8 +17,8 @@ import algvis.ui.InputField;
 import algvis.ui.VisPanel;
 
 public class DaryHeapTest extends HeapBaseTest {
-    DaryHeap daryHeap;
-    DaryHeapNode rootNode, childNode1, childNode2, childNode3;
+    private DaryHeap daryHeap;
+    private DaryHeapNode rootNode, childNode1, childNode2, childNode3;
 
     @Before
     public void setUp() throws Exception {
