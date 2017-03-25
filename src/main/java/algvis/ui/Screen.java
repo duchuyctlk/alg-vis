@@ -48,12 +48,7 @@ public class Screen extends JPanel {
     public Screen(VisPanel panel) {
         this.panel = panel;
         V = new View(this);
-        timer = new Timer(50, new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent evt) {
-                repaint();
-            }
-        });
+        timer = new Timer(50, evt -> repaint());
     }
 
     public void setDS(DataStructure D) {

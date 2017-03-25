@@ -204,12 +204,7 @@ abstract public class Algorithm implements Runnable {
             panel.commentary.clear();
         }
 
-        EventQueue.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                panel.buttons.refresh();
-            }
-        });
+        EventQueue.invokeLater(() -> panel.buttons.refresh());
     }
 
     void end() {
@@ -218,12 +213,7 @@ abstract public class Algorithm implements Runnable {
         panel.history.putAlgorithmEnd();
 
         this.done = true;
-        EventQueue.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                panel.refresh();
-            }
-        });
+        EventQueue.invokeLater(panel::refresh);
     }
 
     public boolean isDone() {
