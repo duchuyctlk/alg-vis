@@ -41,7 +41,7 @@ public enum Fonts {
                 Fonts.class.getResourceAsStream("FreeMonoBold.ttf"));
             f = f.deriveFont(10.0f);
         } catch (final Exception e) {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         } finally {
             if (f == null) {
                 f = Fonts.NORMAL.font;
@@ -55,7 +55,7 @@ public enum Fonts {
             try {
                 f.fm = g.getFontMetrics(f.font);
             } catch (Exception e) {
-                e.printStackTrace();
+                System.out.println(e.getMessage());
             }
         }
     }

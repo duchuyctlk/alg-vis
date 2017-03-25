@@ -73,7 +73,7 @@ public class BaseTest {
             clickButton(visPanel, "clear");
         } catch (Exception e) {
             ex = e;
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         }
 
         if (ex != null) {
@@ -88,7 +88,7 @@ public class BaseTest {
                 };
                 panel.D.start(clearVisPanelAlg);
             } catch (Exception e) {
-                e.printStackTrace();
+                System.out.println(e.getMessage());
             }
         }
     }
