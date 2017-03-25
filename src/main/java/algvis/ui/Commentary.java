@@ -50,9 +50,9 @@ public class Commentary extends JEditorPane implements LanguageListener,
     private final VisPanel panel;
     private final JScrollPane sp;
     private int indexOfNextStep = 0, currentPosition = -1;
-    private List<String> s = new ArrayList<String>(),
-        pre = new ArrayList<String>(), post = new ArrayList<String>();
-    private List<String[]> param = new ArrayList<String[]>();
+    private List<String> s = new ArrayList<>(),
+        pre = new ArrayList<>(), post = new ArrayList<>();
+    private List<String[]> param = new ArrayList<>();
 
     private static final SimpleAttributeSet normalAttr = new SimpleAttributeSet();
     private static final SimpleAttributeSet hoverAttr = new SimpleAttributeSet();
@@ -84,10 +84,10 @@ public class Commentary extends JEditorPane implements LanguageListener,
     public synchronized void clear() {
         currentPosition = -1;
         indexOfNextStep = 0;
-        s = new ArrayList<String>();
-        pre = new ArrayList<String>();
-        post = new ArrayList<String>();
-        param = new ArrayList<String[]>();
+        s = new ArrayList<>();
+        pre = new ArrayList<>();
+        post = new ArrayList<>();
+        param = new ArrayList<>();
         setText("<html><body></body></html>");
     }
 

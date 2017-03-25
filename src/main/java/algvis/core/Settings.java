@@ -25,7 +25,7 @@ import algvis.ui.view.LayoutListener;
 
 public class Settings {
     public Layout layout;
-    private final List<LayoutListener> listeners = new LinkedList<LayoutListener>();
+    private final List<LayoutListener> listeners = new LinkedList<>();
 
     public Settings() {
         layout = Layout.SIMPLE;

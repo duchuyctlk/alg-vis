@@ -93,7 +93,7 @@ public class SuffixTreeFind extends Algorithm {
         }
         hw.setAndGoNextTo("", v);
         final Vector<TreeNode> leaves = v.getLeaves();
-        final Vector<Integer> pos = new Vector<Integer>();
+        final Vector<Integer> pos = new Vector<>();
         for (final TreeNode w : leaves) {
             final int p = w.getKey();
             w.mark();

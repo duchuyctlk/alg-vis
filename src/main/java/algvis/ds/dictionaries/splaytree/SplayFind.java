@@ -23,7 +23,7 @@ import algvis.core.NodeColor;
 import algvis.core.visual.ZDepth;
 
 public class SplayFind extends SplayAlg {
-    private final HashMap<String, Object> result = new HashMap<String, Object>();
+    private final HashMap<String, Object> result = new HashMap<>();
 
     public SplayFind(SplayTree T, int x) {
         super(T, x);

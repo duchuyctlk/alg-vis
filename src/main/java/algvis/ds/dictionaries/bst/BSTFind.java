@@ -27,7 +27,7 @@ import java.util.HashMap;
 public class BSTFind extends Algorithm {
     private final BST T;
     private final int K;
-    private final HashMap<String, Object> result = new HashMap<String, Object>(); // node
+    private final HashMap<String, Object> result = new HashMap<>(); // node
 
     public BSTFind(BST T, int x) {
         this(T, x, null);
