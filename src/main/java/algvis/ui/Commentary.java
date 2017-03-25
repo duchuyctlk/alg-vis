@@ -134,9 +134,7 @@ public class Commentary extends JEditorPane implements LanguageListener,
                     html.setInnerHTML(body, text.toString());
                 }
             }
-        } catch (final BadLocationException e) {
-            e.printStackTrace();
-        } catch (final IOException e) {
+        } catch (final BadLocationException | IOException e) {
             e.printStackTrace();
         }
         scrollDown();
