@@ -18,11 +18,6 @@
 package algvis.core;
 
 import algvis.core.history.UpdatableStateEdit;
-import algvis.core.visual.DoubleArrow;
-import algvis.core.visual.Edge;
-import algvis.core.visual.ShadePair;
-import algvis.core.visual.ShadeSubtree;
-import algvis.core.visual.ShadeTriple;
 import algvis.core.visual.TextBubble;
 import algvis.core.visual.VisualElement;
 import algvis.internationalization.IIntParamString;
@@ -32,9 +27,8 @@ import algvis.ui.NewVisPanel;
 import algvis.ui.VisPanel;
 import algvis.ui.view.REL;
 
-import java.awt.EventQueue;
+import java.awt.*;
 import java.util.HashMap;
-import java.util.concurrent.Semaphore;
 
 /**
  * The Class Algorithm. Each visualized data structure consists of data and

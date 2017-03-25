@@ -17,15 +17,13 @@
  ******************************************************************************/
 package algvis.ui;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.KeyEvent;
-import java.sql.Savepoint;
-import java.util.Vector;
-
-import javax.swing.JPanel;
-
 import algvis.core.Dictionary;
 import algvis.internationalization.IButton;
+
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.KeyEvent;
+import java.util.Vector;
 
 /**
  * The Class DictButtons. All dictionary data structures need buttons "Insert",

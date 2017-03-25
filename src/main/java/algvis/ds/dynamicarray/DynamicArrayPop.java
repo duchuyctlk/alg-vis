@@ -1,6 +1,5 @@
 package algvis.ds.dynamicarray;
 
-import algvis.core.Algorithm;
 import algvis.core.Node;
 import algvis.ui.view.REL;
 import algvis.core.NodeColor;
