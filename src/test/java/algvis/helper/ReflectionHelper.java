@@ -6,12 +6,12 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 public class ReflectionHelper {
-    static Class<?> getClass(String classFullName) {
+    private static Class<?> getClass(String classFullName) {
         Class<?> cls = null;
         try {
             cls = Class.forName(classFullName);
         } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         }
         return cls;
     }
@@ -25,10 +25,8 @@ public class ReflectionHelper {
 
         try {
             field = object.getClass().getDeclaredField(fieldName);
-        } catch (SecurityException e) {
-            e.printStackTrace();
-        } catch (NoSuchFieldException e) {
-            e.printStackTrace();
+        } catch (SecurityException | NoSuchFieldException e) {
+            System.out.println(e.getMessage());
         }
 
         if (field == null) {
@@ -37,10 +35,8 @@ public class ReflectionHelper {
             while (superClass != null) {
                 try {
                     field = superClass.getDeclaredField(fieldName);
-                } catch (SecurityException e) {
-                    e.printStackTrace();
-                } catch (NoSuchFieldException e) {
-                    e.printStackTrace();
+                } catch (SecurityException | NoSuchFieldException e) {
+                    System.out.println(e.getMessage());
                 }
 
                 if (field != null) {
@@ -60,10 +56,8 @@ public class ReflectionHelper {
         Object value = null;
         try {
             value = field.get(object);
-        } catch (IllegalArgumentException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
+        } catch (IllegalArgumentException | IllegalAccessException e) {
+            System.out.println(e.getMessage());
         }
 
         field.setAccessible(isAccessible);
@@ -81,10 +75,8 @@ public class ReflectionHelper {
         Constructor<?> constructor = null;
         try {
             constructor = cls.getConstructor();
-        } catch (SecurityException e) {
-            e.printStackTrace();
-        } catch (NoSuchMethodException e) {
-            e.printStackTrace();
+        } catch (SecurityException | NoSuchMethodException e) {
+            System.out.println(e.getMessage());
         }
 
         Object object = null;
@@ -92,24 +84,16 @@ public class ReflectionHelper {
         if (constructor == null) {
             try {
                 object = cls.newInstance();
-            } catch (InstantiationException e) {
-                e.printStackTrace();
-            } catch (IllegalAccessException e) {
-                e.printStackTrace();
+            } catch (InstantiationException | IllegalAccessException e) {
+                System.out.println(e.getMessage());
             }
         } else {
             boolean constructorIsAccessible = constructor.isAccessible();
             constructor.setAccessible(true);
             try {
                 object = constructor.newInstance();
-            } catch (IllegalArgumentException e) {
-                e.printStackTrace();
-            } catch (InstantiationException e) {
-                e.printStackTrace();
-            } catch (IllegalAccessException e) {
-                e.printStackTrace();
-            } catch (InvocationTargetException e) {
-                e.printStackTrace();
+            } catch (IllegalArgumentException | InstantiationException | IllegalAccessException | InvocationTargetException e) {
+                System.out.println(e.getMessage());
             }
             constructor.setAccessible(constructorIsAccessible);
         }
@@ -128,10 +112,8 @@ public class ReflectionHelper {
 
         try {
             method = cls.getDeclaredMethod(methodName, parameterTypes);
-        } catch (SecurityException e) {
-            e.printStackTrace();
-        } catch (NoSuchMethodException e) {
-            e.printStackTrace();
+        } catch (SecurityException | NoSuchMethodException e) {
+            System.out.println(e.getMessage());
         }
 
         return method; 

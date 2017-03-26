@@ -69,9 +69,7 @@ public class IntervalFindMin extends IntervalAlg {
 
         if (T.root != null) {
             // We have to find the nodes that represent the
-            // interval &lt;#1,#2&gt;. We will search for these nodes with DFS.
-            // Budeme h�ada� vrcholy, ktor� reprezentuj� interval &lt;#1,#2&gt
-            // pomocou DFS.
+            // interval &lt;#1,#2&gt;. We will search for these nodes with DFS
             addNote("intervalfind", i, j); // vysvetlenie
             find(T.root, i, j);
             pause();
@@ -92,8 +90,8 @@ public class IntervalFindMin extends IntervalAlg {
             // }
             T.unfocus(T.root);
             addNote("done");
-        } else {
-            // addNote(); //strom je prazdny/zly interval
+//        } else {
+//             addNote(); //strom je prazdny/zly interval
         }
     }
 

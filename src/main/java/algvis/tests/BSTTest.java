@@ -28,23 +28,22 @@ public class BSTTest {
         int[] del = new int[MAX];
         for (int n = 1; n <= MAX; ++n) {
             ins[n] = del[n] = n;
-            if (true) {   // for all permutations
-                //BST T = new BST();
-                for (int i = 0; i < n; ++i) {
-                    T.insert(ins[i]);
-                }
-                if (!T.getRoot().testOrder()) {
-                    return false;
-                }
-                if (!T.getRoot().testStructure()) {
-                    return false;
-                }
-                for (int i = 0; i < n; ++i) {
-                    T.delete(del[i]);
-                }
-                if (T.getRoot() != null) {
-                    return false;
-                }
+            // for all permutations
+            //BST T = new BST();
+            for (int i = 0; i < n; ++i) {
+                T.insert(ins[i]);
+            }
+            if (!T.getRoot().testOrder()) {
+                return false;
+            }
+            if (!T.getRoot().testStructure()) {
+                return false;
+            }
+            for (int i = 0; i < n; ++i) {
+                T.delete(del[i]);
+            }
+            if (T.getRoot() != null) {
+                return false;
             }
         }
         return true;

@@ -12,8 +12,8 @@ import org.junit.Test;
 import algvis.ui.BaseIntegrationTest;
 
 public class SplayTreeTest extends BaseIntegrationTest {
-    SplayTree splayTree;
-    SplayNode rootNode, leftNode, rightNode;
+    private SplayTree splayTree;
+    private SplayNode rootNode, leftNode, rightNode;
 
     @Before
     public void setUp() throws Exception {

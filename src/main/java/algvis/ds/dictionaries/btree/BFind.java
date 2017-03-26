@@ -25,7 +25,7 @@ import algvis.core.NodeColor;
 public class BFind extends Algorithm {
     private final BTree T;
     private final int K;
-    private final HashMap<String, Object> result = new HashMap<String, Object>();
+    private final HashMap<String, Object> result = new HashMap<>();
 
     public BFind(BTree T, int x) {
         super(T.panel);

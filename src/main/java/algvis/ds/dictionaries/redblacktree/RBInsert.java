@@ -100,7 +100,5 @@ public class RBInsert extends Algorithm {
             T.reposition();
             addNote("done");
         }
-
-        assert (((RBNode) T.getRoot()).testStructure() && ((RBNode) T.getRoot()).testStructure() && ((RBNode) T.getRoot()).testRedBlack());
     }
 }

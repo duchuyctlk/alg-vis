@@ -1,14 +1,9 @@
 package algvis.core;
 
-import algvis.core.history.HashtableStoreSupport;
-import algvis.core.visual.VisualElement;
-import algvis.ui.Fonts;
 import algvis.ui.view.View;
 
 import java.awt.*;
 import java.awt.geom.Rectangle2D;
-import java.util.ConcurrentModificationException;
-import java.util.Hashtable;
 
 public class ArrayNode extends Node {
 

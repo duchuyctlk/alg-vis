@@ -3,7 +3,6 @@ package algvis.ds.dynamicarray;
 import algvis.core.DataStructure;
 import algvis.core.Node;
 import algvis.core.RelativeNode;
-import algvis.ui.Fonts;
 import algvis.ui.view.View;
 
 import java.awt.*;

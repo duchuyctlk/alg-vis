@@ -94,7 +94,7 @@ public class InputField extends JTextField {
      */
     public Vector<Integer> getVI(int min, int max) {
         boolean range = false;
-        final Vector<Integer> args = new Vector<Integer>();
+        final Vector<Integer> args = new Vector<>();
         final String[] tokens = this.getText().replaceAll("\\.{2,}", " .. ")
             .split("(\\s|,)+");
         for (final String t : tokens) {
@@ -161,7 +161,7 @@ public class InputField extends JTextField {
      */
     public Vector<String> getVS() {
         final String ss = getText();
-        Vector<String> result = new Vector<String>();
+        Vector<String> result = new Vector<>();
         if (ss.compareTo("") == 0) {
             result.add(WordGenerator.getWord(s));
         } else {
@@ -177,7 +177,7 @@ public class InputField extends JTextField {
 
     public Vector<String> getVABS(int n) {
         final String ss = getText();
-        Vector<String> result = new Vector<String>();
+        Vector<String> result = new Vector<>();
         if (ss.compareTo("") == 0) {
             result.add(WordGenerator.getABWord(n));
         } else {

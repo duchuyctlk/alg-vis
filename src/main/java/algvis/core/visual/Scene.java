@@ -18,28 +18,22 @@
 
 package algvis.core.visual;
 
-import algvis.core.Node;
 import algvis.core.history.HashtableStoreSupport;
 import algvis.ui.view.View;
 
 import java.awt.geom.Rectangle2D;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Hashtable;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class Scene extends VisualElement {
     public static final int MAXZ = 10, MIDZ = 5;
-    private final List<HashSet<VisualElement>> elements = new ArrayList<HashSet<VisualElement>>();
-    public final Set<VisualElement> elementsToRemove = new HashSet<VisualElement>();
-    private final List<VisualElement> temporaryElements = new ArrayList<VisualElement>();
+    private final List<HashSet<VisualElement>> elements = new ArrayList<>();
+    public final Set<VisualElement> elementsToRemove = new HashSet<>();
+    private final List<VisualElement> temporaryElements = new ArrayList<>();
 
     public Scene() {
         super(0);
         for (int i = 0; i < MAXZ; ++i) {
-            elements.add(new HashSet<VisualElement>());
+            elements.add(new HashSet<>());
         }
         initRemoverThread();
     }
@@ -65,14 +59,14 @@ public class Scene extends VisualElement {
                             final VisualElement element = iterator.next();
                             if (element.isAnimationDone()) {
                                 iterator.remove();
-                                if (element instanceof Node) {
-                                    // System.out.println("removed: " +
-                                    // ((Node) element).getKey());
-                                    // System.out.println("removed: " +
-                                    // element.getZDepth());
-                                    // System.out.println("removed: " +
-                                    // ((Node) element).state);
-                                }
+//                                if (element instanceof Node) {
+//                                     System.out.println("removed: " +
+//                                     ((Node) element).getKey());
+//                                     System.out.println("removed: " +
+//                                     element.getZDepth());
+//                                     System.out.println("removed: " +
+//                                     ((Node) element).state);
+//                                }
                                 final Set<VisualElement> set = elements
                                     .get(element.getZDepth());
                                 set.remove(element);
@@ -234,7 +228,7 @@ public class Scene extends VisualElement {
          * }
          * }
          */
-        final List<Set<VisualElement>> elementsClone = new ArrayList<Set<VisualElement>>();
+        final List<Set<VisualElement>> elementsClone = new ArrayList<>();
         for (final HashSet<VisualElement> set : elements) {
             elementsClone.add((Set<VisualElement>) set.clone());
         }

@@ -40,7 +40,7 @@ public class TextBubble extends VisualElement {
         this.y = y;
         this.w = w;
         this.alpha = 0;
-        this.toalpha = (256 / DA) * DA;;
+        this.toalpha = (256 / DA) * DA;
         this.pos = pos;
     }
 

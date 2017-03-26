@@ -28,7 +28,7 @@ import javax.swing.undo.UndoableEdit;
 
 public class HistoryManager extends UndoManager {
     private static final long serialVersionUID = -842354204488084104L;
-    private final Map<UndoableEdit, Boolean> algorithmEnds = new WeakHashMap<UndoableEdit, Boolean>();
+    private final Map<UndoableEdit, Boolean> algorithmEnds = new WeakHashMap<>();
     private long id = -1;
     private final Scene scene;
     private long savedEditId;

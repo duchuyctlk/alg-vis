@@ -20,17 +20,9 @@ package algvis.ui;
 import algvis.core.DataStructure;
 import algvis.ui.view.View;
 
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.Image;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import javax.swing.*;
+import java.awt.*;
 import java.util.ConcurrentModificationException;
-
-import javax.swing.JPanel;
-import javax.swing.Timer;
 
 public class Screen extends JPanel {
     private static final long serialVersionUID = -8279768206774288161L;
@@ -48,12 +40,7 @@ public class Screen extends JPanel {
     public Screen(VisPanel panel) {
         this.panel = panel;
         V = new View(this);
-        timer = new Timer(50, new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent evt) {
-                repaint();
-            }
-        });
+        timer = new Timer(50, evt -> repaint());
     }
 
     public void setDS(DataStructure D) {

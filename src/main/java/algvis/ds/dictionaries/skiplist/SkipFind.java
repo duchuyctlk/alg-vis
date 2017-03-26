@@ -24,7 +24,7 @@ import algvis.core.visual.ZDepth;
 import algvis.ui.view.REL;
 
 public class SkipFind extends SkipAlg {
-    private final HashMap<String, Object> result = new HashMap<String, Object>();
+    private final HashMap<String, Object> result = new HashMap<>();
 
     public SkipFind(SkipList L, int x) {
         super(L, x);

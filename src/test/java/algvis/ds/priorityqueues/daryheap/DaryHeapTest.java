@@ -17,8 +17,8 @@ import algvis.ui.InputField;
 import algvis.ui.VisPanel;
 
 public class DaryHeapTest extends HeapBaseTest {
-    DaryHeap daryHeap;
-    DaryHeapNode rootNode, childNode1, childNode2, childNode3;
+    private DaryHeap daryHeap;
+    private DaryHeapNode rootNode, childNode1, childNode2, childNode3;
 
     @Before
     public void setUp() throws Exception {
@@ -41,7 +41,7 @@ public class DaryHeapTest extends HeapBaseTest {
 
     @Test
     public void testInsertOnMinHeap() throws Exception {
-        toogleMinHeapMode(true);
+        toggleMinHeapMode(true);
         insertArray(0, 2);
         updateRootNodes();
         assertEquals(keys[1], rootNode.getKey());
@@ -103,7 +103,7 @@ public class DaryHeapTest extends HeapBaseTest {
 
     @Test
     public void testDeleteOnMinHeap() throws Exception {
-        toogleMinHeapMode(true);
+        toggleMinHeapMode(true);
 
         // delete on heap with 1 node
         insert(keys[0]);
@@ -131,7 +131,7 @@ public class DaryHeapTest extends HeapBaseTest {
 
     @Test
     public void testDecrKeyOnMinHeap() throws Exception {
-        toogleMinHeapMode(true);
+        toggleMinHeapMode(true);
         insert(keys[1]);
         insert(keys[0]);
         updateRootNodes();
@@ -173,7 +173,7 @@ public class DaryHeapTest extends HeapBaseTest {
     @Test
     public void testCalcTree() throws Exception {
         insertArray(0, 1);
-        rootNode = (DaryHeapNode) daryHeap.root;
+        rootNode = daryHeap.root;
         rootNode.calcTree();
         assertEquals(2, rootNode.nnodes);
         assertEquals(2, Integer.parseInt(getFieldValue(rootNode, "height").toString()));
@@ -205,7 +205,7 @@ public class DaryHeapTest extends HeapBaseTest {
 
     private void updateRootNodes() {
         if (daryHeap != null) {
-            rootNode = (DaryHeapNode) daryHeap.root;
+            rootNode = daryHeap.root;
             if (rootNode != null && rootNode.c != null) {
                 int rootChildCount = rootNode.c.size();
                 childNode1 = rootChildCount > 0 ? rootNode.c.get(0) : null;

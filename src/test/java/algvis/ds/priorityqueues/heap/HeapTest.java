@@ -12,8 +12,8 @@ import algvis.ds.priorityqueues.HeapBaseTest;
 import algvis.ui.InputField;
 
 public class HeapTest extends HeapBaseTest {
-    Heap heap;
-    HeapNode rootNode, leftNode, rightNode;
+    private Heap heap;
+    private HeapNode rootNode, leftNode, rightNode;
 
     @Before
     public void setUp() throws Exception {
@@ -35,7 +35,7 @@ public class HeapTest extends HeapBaseTest {
 
     @Test
     public void testMinHeap() throws Exception {
-        toogleMinHeapMode(true);
+        toggleMinHeapMode(true);
         assertTrue(heap.minHeap);
 
         insertArray(0, keys.length - 1);
@@ -100,7 +100,7 @@ public class HeapTest extends HeapBaseTest {
 
     @Test
     public void testDeleteOnMinHeap() throws Exception {
-        toogleMinHeapMode(true);
+        toggleMinHeapMode(true);
         insertArray(0, keys.length - 1);
         delete(0);
         updateRootNodes();
@@ -129,7 +129,7 @@ public class HeapTest extends HeapBaseTest {
 
     @Test
     public void testDecrKeyOnMinHeap() throws Exception {
-        toogleMinHeapMode(true);
+        toggleMinHeapMode(true);
         insert(100);
         insert(200);
         updateRootNodes();
@@ -161,14 +161,14 @@ public class HeapTest extends HeapBaseTest {
     @Test
     public void testIsAnimationDone() throws Exception {
         insert(keys[0]);
-        rootNode = (HeapNode) heap.getRoot();
+        rootNode = heap.getRoot();
         rootNode.setState(Node.INVISIBLE);
         assertTrue(heap.isAnimationDone());
     }
 
     private void updateRootNodes() {
         if (heap != null) {
-            rootNode = (HeapNode) heap.getRoot();
+            rootNode = heap.getRoot();
             if (rootNode != null) {
                 leftNode = rootNode.getLeft();
                 rightNode = rootNode.getRight();

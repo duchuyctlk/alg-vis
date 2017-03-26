@@ -44,9 +44,9 @@ public class SuffixTreeFind extends Algorithm {
     @Override
     public void runAlgorithm() {
         setHeader("triefind", s);
-        if (s.length() == 0) {
-            // addNote("badword");
-        }
+//        if (s.length() == 0) {
+//             addNote("badword");
+//        }
 
         SuffixTreeNode v = T.getRoot();
         // addNote("triefindnote");
@@ -93,7 +93,7 @@ public class SuffixTreeFind extends Algorithm {
         }
         hw.setAndGoNextTo("", v);
         final Vector<TreeNode> leaves = v.getLeaves();
-        final Vector<Integer> pos = new Vector<Integer>();
+        final Vector<Integer> pos = new Vector<>();
         for (final TreeNode w : leaves) {
             final int p = w.getKey();
             w.mark();

@@ -14,7 +14,7 @@ import algvis.internationalization.IMenuItem;
 import algvis.internationalization.Stringable;
 
 public abstract class BaseIntegrationTest extends BaseTest {
-    static JFrame mainFrame;
+    private static JFrame mainFrame;
     protected static AlgVis algVis;
     protected int[] keys;
 

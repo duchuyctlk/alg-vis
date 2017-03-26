@@ -219,19 +219,19 @@ public class BSTNode extends Node {
     }
 
     public Vector<BSTNode> preorder() {
-        Vector<BSTNode> acc = new Vector<BSTNode>();
+        Vector<BSTNode> acc = new Vector<>();
         this._preorder(acc);
         return acc;
     }
 
     public Vector<BSTNode> inorder() {
-        Vector<BSTNode> acc = new Vector<BSTNode>();
+        Vector<BSTNode> acc = new Vector<>();
         this._inorder(acc);
         return acc;
     }
 
     public Vector<BSTNode> postorder() {
-        Vector<BSTNode> acc = new Vector<BSTNode>();
+        Vector<BSTNode> acc = new Vector<>();
         this._postorder(acc);
         return acc;
     }
@@ -471,7 +471,7 @@ public class BSTNode extends Node {
      * subtree rooted at this node
      */
     private NodePair<BSTNode> RTPreposition() {
-        final NodePair<BSTNode> result = new NodePair<BSTNode>();
+        final NodePair<BSTNode> result = new NodePair<>();
         NodePair<BSTNode> fromLeftSubtree = null, fromRightSubtree = null;
         offset = 0;
 
@@ -632,11 +632,11 @@ public class BSTNode extends Node {
             D.y2 = toy;
         }
 
-        if (thread) {
-            // thread = false;
-            // setLeft(null);
-            // setRight(null);
-        }
+//        if (thread) {
+//             thread = false;
+//             setLeft(null);
+//             setRight(null);
+//        }
         if (getLeft() != null) {
             getLeft().RTPetrification(tox, y + DataStructure.minsepy);
         }

@@ -24,7 +24,7 @@ import algvis.core.visual.ZDepth;
 import algvis.ds.dictionaries.bst.BSTNode;
 
 public class GBFind extends GBAlg {
-    private final HashMap<String, Object> result = new HashMap<String, Object>();
+    private final HashMap<String, Object> result = new HashMap<>();
 
     public GBFind(GBTree T, int x) {
         super(T, x);

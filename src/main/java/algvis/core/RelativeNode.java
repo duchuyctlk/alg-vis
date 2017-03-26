@@ -1,8 +1,6 @@
 package algvis.core;
 
 import algvis.core.history.HashtableStoreSupport;
-import algvis.core.visual.ZDepth;
-import algvis.ui.view.View;
 
 import java.util.Hashtable;
 

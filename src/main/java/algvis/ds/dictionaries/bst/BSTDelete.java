@@ -29,7 +29,7 @@ import algvis.ui.view.REL;
 public class BSTDelete extends Algorithm {
     private final BST T;
     private final int K;
-    private final HashMap<String, Object> result = new HashMap<String, Object>(); // "deleted"
+    private final HashMap<String, Object> result = new HashMap<>(); // "deleted"
 
     public BSTDelete(BST T, int x) {
         this(T, x, null);
