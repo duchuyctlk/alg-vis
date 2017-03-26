@@ -203,6 +203,5 @@ public class RBDelete extends Algorithm {
             T.reposition();
             addNote("done");
         }
-        assert (T.getRoot() == null || (((RBNode) T.getRoot()).testStructure() && ((RBNode) T.getRoot()).testStructure() && ((RBNode) T.getRoot()).testRedBlack()));
     }
 }
