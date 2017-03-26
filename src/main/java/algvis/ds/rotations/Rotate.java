@@ -115,9 +115,7 @@ public class Rotate extends Algorithm {
         pause();
 
         if (u == T.getRoot()) {
-            if (b != null) {
-
-            } else {
+            if (b == null) {
                 addStep("rotate-newroot-bnull", v.getKey(), u.getKey());
             }
         } else {

@@ -57,6 +57,5 @@ abstract class DynamicArrayAlg extends Algorithm {
       D.coinsForCopy.add(new DynamicArrayCoin(D, D.invisible, 0, 0));
       D.coinsForCopy.get(i).setState(Node.INVISIBLE);
     }
-    return;
   }
 }

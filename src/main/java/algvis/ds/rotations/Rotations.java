@@ -62,10 +62,7 @@ public class Rotations extends DataStructure implements ClickListener {
                 v = v.getLeft();
             }
         }
-        if (v == null) {
-            // vypis ze taky vrchol neexistuje
-            return;
-        } else {
+        if (v != null) {
             start(new Rotate(this, v));
         }
     }

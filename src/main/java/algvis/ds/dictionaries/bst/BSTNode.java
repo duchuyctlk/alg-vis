@@ -632,11 +632,11 @@ public class BSTNode extends Node {
             D.y2 = toy;
         }
 
-        if (thread) {
-            // thread = false;
-            // setLeft(null);
-            // setRight(null);
-        }
+//        if (thread) {
+//             thread = false;
+//             setLeft(null);
+//             setRight(null);
+//        }
         if (getLeft() != null) {
             getLeft().RTPetrification(tox, y + DataStructure.minsepy);
         }

@@ -137,8 +137,7 @@ public class SkewHeap extends MeldablePQ implements ClickListener {
 
     @Override
     public void decreaseKey(Node v, int delta) {
-        if (v == null) {
-        } else {
+        if (v != null) {
             start(new SkewHeapDecrKey(this, (SkewHeapNode) v, delta));
         }
     }

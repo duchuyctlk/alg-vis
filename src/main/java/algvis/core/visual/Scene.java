@@ -65,14 +65,14 @@ public class Scene extends VisualElement {
                             final VisualElement element = iterator.next();
                             if (element.isAnimationDone()) {
                                 iterator.remove();
-                                if (element instanceof Node) {
-                                    // System.out.println("removed: " +
-                                    // ((Node) element).getKey());
-                                    // System.out.println("removed: " +
-                                    // element.getZDepth());
-                                    // System.out.println("removed: " +
-                                    // ((Node) element).state);
-                                }
+//                                if (element instanceof Node) {
+//                                     System.out.println("removed: " +
+//                                     ((Node) element).getKey());
+//                                     System.out.println("removed: " +
+//                                     element.getZDepth());
+//                                     System.out.println("removed: " +
+//                                     ((Node) element).state);
+//                                }
                                 final Set<VisualElement> set = elements
                                     .get(element.getZDepth());
                                 set.remove(element);
