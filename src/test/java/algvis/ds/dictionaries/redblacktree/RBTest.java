@@ -26,6 +26,7 @@ import algvis.ui.view.View;
 public class RBTest extends BaseIntegrationTest {
     private RB rb;
     private RBNode rootNode, leftNode, rightNode;
+    private static final boolean NODE_COLOR_RED = true;
 
     @Before
     public void setUp() throws Exception {
@@ -182,21 +183,20 @@ public class RBTest extends BaseIntegrationTest {
         // delete at rootNode
         // rightNode is black
         // left most child of rightNode is black
-        // right child of rightNode is red
+        // right child of rightNode is NODE_COLOR_RED
         keys = new int[] {100, 80, 150, 70, 86, 125, 200, 60, 75, 85, 88, 175, 210};
         insertArray(0, keys.length - 1);
 
         // modify color but keep the tree a Red-Black tree
-        boolean red = true;
-        setRedByKey(keys[1], !red);
-        setRedByKey(keys[3], red);
-        setRedByKey(keys[4], red);
-        setRedByKey(keys[7], !red);
-        setRedByKey(keys[8], !red);
-        setRedByKey(keys[9], !red);
-        setRedByKey(keys[10], !red);
-        setRedByKey(keys[11], !red);
-        setRedByKey(keys[12], !red);
+        setRedByKey(keys[1], !NODE_COLOR_RED);
+        setRedByKey(keys[3], NODE_COLOR_RED);
+        setRedByKey(keys[4], NODE_COLOR_RED);
+        setRedByKey(keys[7], !NODE_COLOR_RED);
+        setRedByKey(keys[8], !NODE_COLOR_RED);
+        setRedByKey(keys[9], !NODE_COLOR_RED);
+        setRedByKey(keys[10], !NODE_COLOR_RED);
+        setRedByKey(keys[11], !NODE_COLOR_RED);
+        setRedByKey(keys[12], !NODE_COLOR_RED);
         updateRootNodes();
         assertTrue(rootNode.testStructure());
 
@@ -211,7 +211,7 @@ public class RBTest extends BaseIntegrationTest {
     @Test
     public void testDeleteMinorCase02() throws Exception {
         // delete at rootNode
-        // rightNode is red
+        // rightNode is NODE_COLOR_RED
         // left most child of rightNode is black
         // right child of rightNode is black
         // right right child of rightNode is black or NULL
@@ -219,18 +219,17 @@ public class RBTest extends BaseIntegrationTest {
         insertArray(0, keys.length - 1);
 
         // modify color but keep the tree a Red-Black tree
-        boolean red = true;
-        setRedByKey(keys[1], !red);
-        setRedByKey(keys[2], !red);
-        setRedByKey(keys[3], red);
-        setRedByKey(keys[4], red);
-        setRedByKey(keys[6], red);
-        setRedByKey(keys[7], !red);
-        setRedByKey(keys[8], !red);
-        setRedByKey(keys[9], !red);
-        setRedByKey(keys[10], !red);
-        setRedByKey(keys[11], !red);
-        setRedByKey(keys[12], !red);
+        setRedByKey(keys[1], !NODE_COLOR_RED);
+        setRedByKey(keys[2], !NODE_COLOR_RED);
+        setRedByKey(keys[3], NODE_COLOR_RED);
+        setRedByKey(keys[4], NODE_COLOR_RED);
+        setRedByKey(keys[6], NODE_COLOR_RED);
+        setRedByKey(keys[7], !NODE_COLOR_RED);
+        setRedByKey(keys[8], !NODE_COLOR_RED);
+        setRedByKey(keys[9], !NODE_COLOR_RED);
+        setRedByKey(keys[10], !NODE_COLOR_RED);
+        setRedByKey(keys[11], !NODE_COLOR_RED);
+        setRedByKey(keys[12], !NODE_COLOR_RED);
         updateRootNodes();
         assertTrue(rootNode.testStructure());
 
@@ -248,11 +247,10 @@ public class RBTest extends BaseIntegrationTest {
         insertArray(0, keys.length - 1);
 
         // modify color but keep the tree a Red-Black tree
-        boolean red = true;
-        setRedByKey(keys[2], red);
-        setRedByKey(keys[8], !red);
-        setRedByKey(keys[9], !red);
-        setRedByKey(keys[6], !red);
+        setRedByKey(keys[2], NODE_COLOR_RED);
+        setRedByKey(keys[8], !NODE_COLOR_RED);
+        setRedByKey(keys[9], !NODE_COLOR_RED);
+        setRedByKey(keys[6], !NODE_COLOR_RED);
 
         updateRootNodes();
         assertTrue(rootNode.testStructure());
@@ -269,11 +267,10 @@ public class RBTest extends BaseIntegrationTest {
         insertArray(0, keys.length - 1);
 
         // modify color but keep the tree a Red-Black tree
-        boolean red = true;
-        setRedByKey(keys[2], red);
-        setRedByKey(keys[8], !red);
-        setRedByKey(keys[9], !red);
-        setRedByKey(keys[6], !red);
+        setRedByKey(keys[2], NODE_COLOR_RED);
+        setRedByKey(keys[8], !NODE_COLOR_RED);
+        setRedByKey(keys[9], !NODE_COLOR_RED);
+        setRedByKey(keys[6], !NODE_COLOR_RED);
 
         updateRootNodes();
         assertTrue(rootNode.testStructure());
