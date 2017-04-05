@@ -45,7 +45,6 @@ public class RBDelete extends Algorithm {
         if (d == null) { // notfound
             addNote("notfound");
             addNote("done");
-            return;
         } else {
             setHeader("delete", K);
             addToScene(d);
