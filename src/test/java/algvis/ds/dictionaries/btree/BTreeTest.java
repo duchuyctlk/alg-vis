@@ -83,12 +83,12 @@ public class BTreeTest extends BTreeBaseTest {
             BTreeButtons buttons = (BTreeButtons) activeVisPanel.buttons;
             JSpinner OS = (JSpinner) getFieldValue(buttons, "OS");
             if (OS != null) {
-                    OS.setValue(3);
+                    OS.setValue(order);
                     orderSet = true;
             }
         }
         if (!orderSet) {
-            tree.setOrder(3);
+            tree.setOrder(order);
         }
     }
 }
